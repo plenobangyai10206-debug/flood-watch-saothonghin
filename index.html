@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ศูนย์ข้อมูลน้ำ — Pleno บางใหญ่ / เสาธงหิน</title>
+<style>
+:root{
+  --bg:#f3f6fb; --card:#ffffff; --ink:#0f2233; --sub:#5a6b7a; --line:#dfe7ef; --brand-2:#0a4f7a; --chip:#eaf3fb;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); box-sizing:border-box;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0b1420; --card:#121d2c; --ink:#eaf1f8; --sub:#9fb2c3; --line:#22344a; --brand-2:#7fd3ff; --chip:#16283b; }
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:"Sarabun","Noto Sans Thai",system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px}
+.wrap{max-width:480px;width:100%}
+h1{font-size:1.25rem;margin:0 0 6px;text-align:center}
+p.sub{color:var(--sub);text-align:center;margin:0 0 24px;font-size:.9rem}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;text-decoration:none;color:var(--ink)}
+a.card .t{font-weight:700;color:var(--brand-2);font-size:1.02rem}
+a.card .d{color:var(--sub);font-size:.85rem;margin-top:4px}
+footer{text-align:center;color:var(--sub);font-size:.75rem;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🌧️ ศูนย์ข้อมูลน้ำ</h1>
+  <p class="sub">Pleno บางใหญ่ — ซอยสองพี่น้อง ต.เสาธงหิน อ.บางใหญ่ นนทบุรี</p>
+  <a class="card" href="dashboard.html">
+    <div class="t">💧 Dashboard สถานการณ์น้ำ</div>
+    <div class="d">ลิงก์เรดาร์ฝน ระดับน้ำ และ CCTV แบบเรียลไทม์</div>
+  </a>
+  <a class="card" href="manual.html">
+    <div class="t">📘 คู่มือรับมือน้ำท่วม</div>
+    <div class="d">เบอร์ติดต่อฉุกเฉิน และขั้นตอนปฏิบัติเมื่อเกิดน้ำท่วม</div>
+  </a>
+  <footer>จัดทำโดยนิติบุคคลหมู่บ้าน Pleno บางใหญ่</footer>
+</div>
+</body>
+</html>

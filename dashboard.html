@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ห้องสถานการณ์น้ำ — ซอยสองพี่น้อง เสาธงหิน บางใหญ่</title>
+<style>
+:root{
+  --bg:#f3f6fb; --card:#ffffff; --ink:#0f2233; --sub:#5a6b7a;
+  --line:#dfe7ef; --brand:#0e6ba8; --brand-2:#0a4f7a; --accent:#0aa06e;
+  --warn:#c0392b; --chip:#eaf3fb;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1420; --card:#121d2c; --ink:#eaf1f8; --sub:#9fb2c3;
+    --line:#22344a; --brand:#4db4ee; --brand-2:#7fd3ff; --accent:#4fd39a;
+    --warn:#ff8a7a; --chip:#16283b;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1420; --card:#121d2c; --ink:#eaf1f8; --sub:#9fb2c3;
+  --line:#22344a; --brand:#4db4ee; --brand-2:#7fd3ff; --accent:#4fd39a;
+  --warn:#ff8a7a; --chip:#16283b;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Sarabun","Noto Sans Thai",system-ui,-apple-system,sans-serif;line-height:1.55}
+header{padding:22px 18px 16px;max-width:920px;margin:0 auto}
+h1{font-size:1.35rem;margin:0 0 6px;color:var(--ink)}
+.loc{color:var(--sub);font-size:.95rem;margin:0 0 12px}
+.clockbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;color:var(--sub)}
+.clockbar b{color:var(--ink)}
+.maplink{display:inline-flex;align-items:center;gap:6px;background:var(--chip);color:var(--brand-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px;text-decoration:none;font-size:.85rem;font-weight:600}
+main{max-width:920px;margin:0 auto;padding:0 18px 40px}
+section{margin-top:26px}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.sec-head .ic{font-size:1.3rem}
+.sec-head h2{font-size:1.05rem;margin:0;color:var(--ink)}
+.sec-note{color:var(--sub);font-size:.88rem;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink);transition:transform .12s, box-shadow .12s}
+a.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(10,40,70,.10)}
+.card .name{font-weight:700;font-size:.98rem;color:var(--brand-2)}
+.card .desc{color:var(--sub);font-size:.85rem;margin-top:5px}
+.card .url{color:var(--sub);font-size:.75rem;margin-top:8px;opacity:.75;word-break:break-all}
+.info{background:var(--chip);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:.87rem;color:var(--sub);margin-bottom:12px}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.contact ul{margin:8px 0 0;padding-left:20px}
+.contact li{margin-bottom:6px;font-size:.9rem}
+.hotlines{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.hot{background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:.85rem}
+.hot b{color:var(--warn)}
+footer{max-width:920px;margin:0 auto;padding:10px 18px 30px;color:var(--sub);font-size:.78rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌧️ ห้องสถานการณ์น้ำ — สองพี่น้อง / เสาธงหิน</h1>
+  <p class="loc">ซอยสองพี่น้อง ต.เสาธงหิน อ.บางใหญ่ จ.นนทบุรี — ศูนย์รวมลิงก์ติดตามสถานการณ์น้ำท่วม พยากรณ์ฝน และหน่วยงานดูแลประตูระบายน้ำ</p>
+  <div class="clockbar">
+    <span>เปิดหน้านี้เมื่อ <b id="ts"></b></span>
+    <a class="maplink" href="https://www.google.com/maps?q=13.8916,100.3883" target="_blank" rel="noopener">📍 ตำแหน่งพื้นที่บนแผนที่</a>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <div class="sec-head"><span class="ic">💧</span><h2>สถานการณ์น้ำ / น้ำท่วมปัจจุบัน</h2></div>
+    <p class="sec-note">พื้นที่บางใหญ่อยู่ในลุ่มน้ำเจ้าพระยาตอนล่าง — แหล่งข้อมูลด้านล่างอัปเดตระดับน้ำและสถานการณ์อุทกภัยทั่วประเทศแบบต่อเนื่อง กดเข้าไปดูข้อมูลสดที่ต้นทาง</p>
+    <div class="grid">
+      <a class="card" href="https://www.thaiwater.net" target="_blank" rel="noopener">
+        <div class="name">คลังข้อมูลน้ำแห่งชาติ (Thaiwater.net)</div>
+        <div class="desc">สสน. — แผนที่ระดับน้ำ ฝน และสถานการณ์น้ำท่วมทั่วประเทศ รวมในที่เดียว</div>
+        <div class="url">thaiwater.net</div>
+      </a>
+      <a class="card" href="https://water.rid.go.th" target="_blank" rel="noopener">
+        <div class="name">กรมชลประทาน — สถานการณ์ลุ่มน้ำเจ้าพระยา</div>
+        <div class="desc">รายงานระดับน้ำ/การระบายน้ำรายวันของลุ่มเจ้าพระยา ซึ่งครอบคลุมพื้นที่บางใหญ่</div>
+        <div class="url">water.rid.go.th</div>
+      </a>
+      <a class="card" href="https://disaster.gistda.or.th" target="_blank" rel="noopener">
+        <div class="name">GISTDA — ภาพถ่ายดาวเทียมพื้นที่น้ำท่วม</div>
+        <div class="desc">วิเคราะห์ขอบเขตน้ำท่วมจากดาวเทียม อัปเดตช่วงมีสถานการณ์</div>
+        <div class="url">disaster.gistda.or.th</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="ic">🌦️</span><h2>พยากรณ์อากาศ & เรดาร์ฝนเรียลไทม์</h2></div>
+    <div class="grid">
+      <a class="card" href="https://www.windy.com/?rain,13.8916,100.3883,11" target="_blank" rel="noopener">
+        <div class="name">Windy — เรดาร์ฝนเคลื่อนไหว (ปักหมุดพื้นที่แล้ว)</div>
+        <div class="desc">ดูกลุ่มฝนเข้า-ออกพื้นที่บางใหญ่แบบเรียลไทม์ เลื่อนเวลาดูแนวโน้มล่วงหน้าได้</div>
+        <div class="url">windy.com</div>
+      </a>
+      <a class="card" href="https://weather.tmd.go.th" target="_blank" rel="noopener">
+        <div class="name">กรมอุตุนิยมวิทยา — เรดาร์ตรวจอากาศ</div>
+        <div class="desc">เลือกสถานีเรดาร์ใกล้กรุงเทพฯ/ปริมณฑล ดูกลุ่มฝนสดจากเรดาร์จริง</div>
+        <div class="url">weather.tmd.go.th</div>
+      </a>
+      <a class="card" href="https://satda.tmd.go.th" target="_blank" rel="noopener">
+        <div class="name">กรมอุตุนิยมวิทยา — พยากรณ์ฝนล่วงหน้า (ดาวเทียม)</div>
+        <div class="desc">Nowcasting กลุ่มฝน 3 ชม. ข้างหน้า บริเวณกรุงเทพฯ-ปริมณฑล</div>
+        <div class="url">satda.tmd.go.th</div>
+      </a>
+      <a class="card" href="https://www.tmd.go.th" target="_blank" rel="noopener">
+        <div class="name">กรมอุตุนิยมวิทยา — พยากรณ์อากาศรายวัน/ประกาศเตือน</div>
+        <div class="desc">พยากรณ์รายวันและประกาศเตือนภัยฝนตกหนักอย่างเป็นทางการ</div>
+        <div class="url">tmd.go.th</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="ic">📹</span><h2>กล้อง CCTV ประตูระบายน้ำ & หน่วยงานที่ดูแล</h2></div>
+    <div class="info">ปัจจุบันยังไม่มีเว็บสาธารณะรวมภาพกล้อง CCTV ของประตูระบายน้ำระดับคลองย่อยในพื้นที่นี้แบบเรียลไทม์ ทางที่เร็วที่สุดคือติดต่อหน่วยงานที่ดูแลอาคารบังคับน้ำโดยตรง เพื่อขอลิงก์ภาพกล้อง หรือขอเข้ากลุ่มไลน์แจ้งเตือนระดับน้ำของพื้นที่</div>
+    <div class="contact">
+      <ul>
+        <li><b>โครงการชลประทานนนทบุรี</b> (สำนักงานชลประทานที่ 11 กรมชลประทาน) — ผู้ดูแลประตูระบายน้ำ/คลองสายหลักที่ส่งผลต่อพื้นที่บางใหญ่ เหมาะสำหรับขอข้อมูลระดับน้ำและภาพกล้องเฉพาะจุดที่ใกล้ซอยสองพี่น้องที่สุด — คลองย่อยที่เกี่ยวข้องโดยตรงกับพื้นที่คือ <b>คลองถนน</b> และ <b>คลองเสือปลา</b> ระบุชื่อคลองทั้งสองนี้เวลาติดต่อ จะช่วยให้เจ้าหน้าที่ระบุจุดและตารางเปิด-ปิดประตู/สูบน้ำได้ตรงและเร็วขึ้น</li>
+        <li><b>เทศบาลตำบล/อบต. เสาธงหิน</b> — หน่วยงานท้องถิ่น มักประกาศแจ้งเตือนน้ำท่วม/ระดับน้ำผ่านเพจ Facebook ทางการของพื้นที่</li>
+        <li><b>สำนักงาน ปภ. จังหวัดนนทบุรี</b> — ประสานการแจ้งเตือนและช่วยเหลือกรณีเกิดอุทกภัยในพื้นที่</li>
+      </ul>
+      <div class="hotlines">
+        <span class="hot">สายด่วนกรมชลประทาน <b>1460</b></span>
+        <span class="hot">สายด่วน ปภ. <b>1784</b></span>
+        <span class="hot">ศูนย์เตือนภัยพิบัติแห่งชาติ <b>192</b></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  ลิงก์ทั้งหมดเปิดข้อมูลสดจากต้นทางของแต่ละหน่วยงานโดยตรง หน้านี้เป็นเพียงศูนย์รวมทางลัด ไม่ได้ดึงหรือเก็บข้อมูลใด ๆ ไว้เอง — โปรดยึดประกาศทางการจากหน่วยงานที่เกี่ยวข้องเป็นหลักในการตัดสินใจ
+</footer>
+
+<script>
+function updateClock(){
+  var d=new Date();
+  var opts={year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'};
+  try{
+    document.getElementById('ts').textContent=d.toLocaleString('th-TH',opts);
+  }catch(e){
+    document.getElementById('ts').textContent=d.toString();
+  }
+}
+updateClock();
+</script>
+</body>
+</html>
